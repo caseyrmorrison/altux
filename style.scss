@@ -1,0 +1,240 @@
+
+@font-face{
+    font-family: Segoe UI Normal;
+    src: url(fonts/segoeuisl.ttf);
+}
+
+@font-face{
+    font-family: Segoe UI Light;
+    src: url(fonts/segoeuil.ttf);
+}
+
+@font-face{
+    font-family: Segoe UI Bold;
+    src: url(fonts/seguisb.ttf);
+}
+
+@mixin easing-curve($curve-spec){
+-webkit-transition: $curve-spec;
+-moz-transition: $curve-spec; 
+-o-transition: $curve-spec;
+transition: $curve-spec;
+-webkit-transition-timing-function: $curve-spec; 
+-moz-transition-timing-function: $curve-spec;
+-o-transition-timing-function: $curve-spec; 
+transition-timing-function: $curve-spec;
+}
+
+/*
+    @include easing-curve (all 500ms cubic-bezier(0.165, 0.940, 0.260, 0.995));
+*/
+
+$purple: rgba(116,77,169,1);
+$black: rgba(0,0,0,1);
+$white: rgba(255,255,255,1);
+$blue: rgba(74,144,226,1);
+$fontGray: rgba(255,255,255,.5);
+
+$font-normal: Segoe UI Normal;
+$font-bold: Segoe UI Bold;
+
+body{
+    background-image:url(assets/cabin.jpg);
+    color:$white;
+    font-family: $font-normal;
+    font-size:13px;
+}
+
+.blue-overlay{
+    background-color:$blue;
+    opacity:.7;
+    width:100%;
+    height:100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.purple-overlay{
+    background-color:$purple;
+    opacity:.7;
+    width:100%;
+    height:100%;
+    position: absolute;
+    z-index: 2;
+}
+
+main{
+    position: relative;
+    z-index:5;
+}
+
+header{
+    background-color:$purple;
+    padding:10px 0px;
+    position: fixed;
+    width:100%;
+}
+
+header span{
+    display:inline-block;
+}
+
+.case-header-details{
+    border-left:1px solid $fontGray;
+}
+
+.data-label{
+    color: $fontGray;
+    padding-right:10px;
+}
+
+.h-aligned{
+    margin-right:35px;
+}
+
+.stacked-bottom{
+    margin-top:10px;
+}
+
+.btn-primary{
+    background-color:transparent;
+    border:2px solid $white;
+    padding:5px 25px;
+}
+
+.btn-primary:hover{
+    background-color:rgba(255,255,255,.1);
+    border:2px solid $white;
+    padding:5px 25px;
+}
+
+.main-content{
+    padding-top:66px;
+}
+
+.grid-wrapper{
+    padding:5px;
+}
+
+.grid{
+    width:75%;
+    box-sizing: border-box;
+    float:left;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-sizer,
+.grid-item{
+    width:50%;
+}
+
+#notes-column{
+    position: fixed;
+    right:0;
+    width:25%;
+    height:100%;
+    background-color: $purple;
+}
+
+.tile{
+    padding:5px;
+    box-sizing: border-box;
+}
+
+.top-tile{
+    padding-top:10px;
+}
+
+.tile-content{
+    padding:15px;
+    background-color:$black;
+    box-sizing: border-box;
+}
+
+.tile-title{
+    display:block;
+    font-family: Segoe UI Light;
+    font-size: 20px;
+    margin-bottom:20px;
+}
+
+.column-header{
+    display:block;
+    padding-bottom:5px;
+    border-bottom:1px solid $fontGray;
+    font-size: 20px;
+}
+
+.column-data{
+    display:block;
+    margin-top:10px;
+}
+
+#profile-tile{
+    background-color:transparent;
+}
+
+.profile{
+    text-align: center;
+    font-family: $font-bold;
+}
+
+.profile img{
+    width:75px;
+    height:auto;
+    margin-right:15px;
+}
+
+.profile-name{
+    display:inline-block;
+    line-height: 75px;
+    vertical-align: middle;
+    font-size: 36px;
+}
+.tile-icon{
+    margin-right:5px;
+}
+
+#client-dash-alerts .col-xs-4{
+    margin-bottom:15px;
+}
+
+@media (max-width: 960px) {
+.grid{
+    width:100%;
+    box-sizing: border-box;
+    padding-top:305px;
+    float:left;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-sizer,
+.grid-item{
+    width:100%;
+}
+
+#notes-column{
+    position: fixed;
+    right:0;
+    width:100%;
+    height:300px;
+    background-color: $purple;
+}
+
+.top-tile{
+    padding-top:5px;
+}
+
+}
