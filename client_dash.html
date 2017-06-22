@@ -48,7 +48,8 @@
         <div id="notes-column"></div>
         <div class="grid">
             <div class="grid-sizer"></div>
-            <div class="grid-item tile top-tile">
+
+            <div id="client-profile-info" class="grid-item tile top-tile">
                 <div id="profile-tile" class="tile-content">
                     <div class="profile">
                     <img src="assets/tormund.png" /><span class="profile-name">Kyle Geddes</span>
@@ -89,11 +90,102 @@
                     </div>
                 </div>
             </div>
-            <div class="grid-item tile top-tile">
+
+            <div id="services-tile" class="grid-item tile top-tile">
                 <div class="tile-content">
                     <span class="tile-title">Services</span>
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <div class="service-icon">
+                            <img class="tile-icon" src="assets/Xbox_icon.png" />
+                            </div>
+                            <div class="service-info">
+                                <span class="service-name">Xbox Live</span><span class="services-sub-state">Subscribed</span><br />
+                                <span class="service-data">Gold member 11 years<br />
+                                Gamerscore 38595
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="service-icon">
+                            <img class="tile-icon" src="assets/O365_icon.png" />
+                            </div>
+                            <div class="service-info">
+                                <span class="service-name">Office 365</span><span class="services-sub-state">Not Subscribed</span><br />
+                                <span class="service-data"></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="service-icon">
+                            <img class="tile-icon" src="assets/OneDrive_icon.png" />
+                            </div>
+                            <div class="service-info">
+                                <span class="service-name">OneDrive</span><span class="services-sub-state">Subscribed</span><br />
+                                <span class="service-data">463 MB of 15 GB remaining<br />
+                                97% storage used
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="service-icon">
+                            <img class="tile-icon" src="assets/Groove_icon.png" />
+                            </div>
+                            <div class="service-info">
+                                <span class="service-name">Groove Music</span><span class="services-sub-state">Not Subscribed</span><br />
+                                <span class="service-data"></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="service-icon">
+                            <img class="tile-icon" src="assets/Wrench_icon.png" />
+                            </div>
+                            <div class="service-info">
+                                <span class="service-name">Microsoft Azure</span><span class="services-sub-state">Subscribed</span><br />
+                                <span class="service-data"></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="service-icon">
+                            <img class="tile-icon" src="assets/OneStore_icon.png" />
+                            </div>
+                            <div class="service-info">
+                                <span class="service-name">One Store</span><span class="services-sub-state">Enabled</span><br />
+                                <span class="service-data"></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="service-icon">
+                            <img class="tile-icon" src="assets/OtherServices_icon.png" />
+                            </div>
+                            <div class="service-info">
+                                <span class="service-name">Other Services</span><span class="services-sub-state">Not Subscribed</span><br />
+                                <span class="service-data"></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="service-icon">
+                            <img class="tile-icon" src="assets/Family_icon.png" />
+                            </div>
+                            <div class="service-info">
+                                <span class="service-name">Family</span><span class="services-sub-state">Enabled</span><br />
+                                <span class="service-data">2 Xbox adults<br />
+                                97% storage used
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="service-icon">
+                            <img class="tile-icon" src="assets/MSPacific_icon.png" />
+                            </div>
+                            <div class="service-info">
+                                <span class="service-name">MS Pacific</span><span class="services-sub-state">Not Subscribed</span><br />
+                                <span class="service-data"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div id="client-dash-alerts" class="grid-item tile">
                 <div class="tile-content">
                     <span class="tile-title">Alerts</span>
@@ -128,21 +220,79 @@
                     </div>
                 </div>
             </div>
-            <div class="grid-item tile">
+
+            <div id="client-dash-cases" class="grid-item tile">
                 <div class="tile-content">
                     <span class="tile-title">Cases</span>
+                    <table class="tile-table">
+                        <thead>
+                            <tr>
+                                <th>Case ID</th>
+                                <th>Status</th>
+                                <th>Product</th>
+                                <th>Category</th>
+                                <th>Last modified date</th>
+                                <th>Created date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12341804185</td>
+                                <td>Open</td>
+                                <td>Xbox</td>
+                                <td>Techincal Support</td>
+                                <td>June 2, 2016 14:38</td>
+                                <td>June 1, 2016 9:00</td>
+                            </tr>
+                            <tr>
+                                <td>12341804185</td>
+                                <td>Open</td>
+                                <td>Xbox</td>
+                                <td>Techincal Support</td>
+                                <td>June 2, 2016 14:38</td>
+                                <td>June 1, 2016 9:00</td>
+                            </tr>
+                            <tr>
+                                <td>12341804185</td>
+                                <td>Open</td>
+                                <td>Xbox</td>
+                                <td>Techincal Support</td>
+                                <td>June 2, 2016 14:38</td>
+                                <td>June 1, 2016 9:00</td>
+                            </tr>
+                            <tr>
+                                <td>12341804185</td>
+                                <td>Open</td>
+                                <td>Xbox</td>
+                                <td>Techincal Support</td>
+                                <td>June 2, 2016 14:38</td>
+                                <td>June 1, 2016 9:00</td>
+                            </tr>
+                            <tr>
+                                <td>12341804185</td>
+                                <td>Open</td>
+                                <td>Xbox</td>
+                                <td>Techincal Support</td>
+                                <td>June 2, 2016 14:38</td>
+                                <td>June 1, 2016 9:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+
             <div class="grid-item tile">
                 <div class="tile-content">
                     <span class="tile-title">Payment Instruments</span>
                 </div>
             </div>
+
             <div class="grid-item tile">
                 <div class="tile-content">
                     <span class="tile-title">Comments</span>
                 </div>
             </div>
+
         </div>
     </div>        
 </div>

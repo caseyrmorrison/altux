@@ -40,16 +40,17 @@ header {
   background-color: #744da9;
   padding: 10px 0px;
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  z-index: 100; }
 
 header span {
   display: inline-block; }
 
 .case-header-details {
-  border-left: 1px solid rgba(255, 255, 255, 0.5); }
+  border-left: 1px solid #cccccc; }
 
 .data-label {
-  color: rgba(255, 255, 255, 0.5);
+  color: #cccccc;
   padding-right: 10px; }
 
 .h-aligned {
@@ -94,7 +95,8 @@ header span {
   right: 0;
   width: 25%;
   height: 100%;
-  background-color: #744da9; }
+  background-color: #744da9;
+  z-index: 100; }
 
 .tile {
   padding: 5px;
@@ -104,7 +106,7 @@ header span {
   padding-top: 10px; }
 
 .tile-content {
-  padding: 15px;
+  padding: 15px 20px;
   background-color: black;
   box-sizing: border-box; }
 
@@ -117,7 +119,7 @@ header span {
 .column-header {
   display: block;
   padding-bottom: 5px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid #cccccc;
   font-size: 20px; }
 
 .column-data {
@@ -147,6 +149,55 @@ header span {
 
 #client-dash-alerts .col-xs-4 {
   margin-bottom: 15px; }
+
+#services-tile .col-xs-4 {
+  min-height: 41px;
+  margin-bottom: 20px; }
+
+.service-icon {
+  height: 100%;
+  margin-right: 5px; }
+
+.service-icon, .service-info {
+  float: left;
+  display: inline-block; }
+
+.service-info {
+  line-height: 13px; }
+
+.service-name {
+  display: inline-block;
+  padding-right: 5px;
+  margin-right: 5px;
+  border-right: 1px solid white; }
+
+.services-sub-state {
+  line-height: 13px;
+  vertical-align: middle;
+  font-size: 9px;
+  text-transform: uppercase; }
+
+.service-data {
+  color: #cccccc;
+  font-size: 9px; }
+
+.tile-table {
+  width: 100%; }
+
+.tile-table thead {
+  border-bottom: 1px solid #cccccc;
+  line-height: 20px; }
+
+.tile-table thead th {
+  font-size: 11px;
+  color: #cccccc; }
+
+.tile-table tbody {
+  font-size: 13px; }
+
+.tile-table tbody td {
+  font-family: Segoe UI Light;
+  padding: 10px 0px; }
 
 @media (max-width: 960px) {
   .grid {

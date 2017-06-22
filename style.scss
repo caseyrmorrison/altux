@@ -16,12 +16,12 @@
 
 @mixin easing-curve($curve-spec){
 -webkit-transition: $curve-spec;
--moz-transition: $curve-spec; 
+-moz-transition: $curve-spec;
 -o-transition: $curve-spec;
 transition: $curve-spec;
--webkit-transition-timing-function: $curve-spec; 
+-webkit-transition-timing-function: $curve-spec;
 -moz-transition-timing-function: $curve-spec;
--o-transition-timing-function: $curve-spec; 
+-o-transition-timing-function: $curve-spec;
 transition-timing-function: $curve-spec;
 }
 
@@ -33,8 +33,9 @@ $purple: rgba(116,77,169,1);
 $black: rgba(0,0,0,1);
 $white: rgba(255,255,255,1);
 $blue: rgba(74,144,226,1);
-$fontGray: rgba(255,255,255,.5);
+$fontGray: rgba(204,204,204,1);
 
+$font-light: Segoe UI Light;
 $font-normal: Segoe UI Normal;
 $font-bold: Segoe UI Bold;
 
@@ -47,7 +48,7 @@ body{
 
 .blue-overlay{
     background-color:$blue;
-    opacity:.7;
+    opacity:.2;
     width:100%;
     height:100%;
     position: absolute;
@@ -56,7 +57,7 @@ body{
 
 .purple-overlay{
     background-color:$purple;
-    opacity:.7;
+    opacity:.2;
     width:100%;
     height:100%;
     position: absolute;
@@ -73,6 +74,7 @@ header{
     padding:10px 0px;
     position: fixed;
     width:100%;
+    z-index: 100;
 }
 
 header span{
@@ -140,6 +142,7 @@ header span{
     width:25%;
     height:100%;
     background-color: $purple;
+    z-index:100;
 }
 
 .tile{
@@ -152,7 +155,7 @@ header span{
 }
 
 .tile-content{
-    padding:15px;
+    padding:15px 20px;
     background-color:$black;
     box-sizing: border-box;
 }
@@ -203,6 +206,67 @@ header span{
 
 #client-dash-alerts .col-xs-4{
     margin-bottom:15px;
+}
+
+#services-tile .col-xs-4{
+    min-height:41px;
+    margin-bottom:20px;
+}
+
+.service-icon{
+    height:100%;
+    margin-right:5px;
+}
+
+.service-icon, .service-info{
+    float:left;
+    display:inline-block;
+}
+
+.service-info{
+    line-height:13px;
+}
+
+.service-name{
+    display:inline-block;
+    padding-right:5px;
+    margin-right:5px;
+    border-right:1px solid $white;
+}
+
+.services-sub-state{
+    line-height: 13px;
+    vertical-align: middle;
+    font-size:9px;
+    text-transform: uppercase;
+}
+
+.service-data{
+    color:$fontGray;
+    font-size: 9px;
+}
+
+.tile-table{
+    width:100%;
+}
+
+.tile-table thead{
+    border-bottom: 1px solid $fontGray;
+    line-height: 20px;
+}
+
+.tile-table thead th{
+    font-size:11px;
+    color: $fontGray;
+}
+
+.tile-table tbody{
+    font-size:13px;
+}
+
+.tile-table tbody td{
+    font-family: $font-light;
+    padding:10px 0px;
 }
 
 @media (max-width: 960px) {
