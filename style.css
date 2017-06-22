@@ -199,6 +199,10 @@ header span {
   font-family: Segoe UI Light;
   padding: 10px 0px; }
 
+.dropdown-arrow {
+  display: inline-block;
+  padding: 5px 10px; }
+
 @media (max-width: 960px) {
   .grid {
     width: 100%;
