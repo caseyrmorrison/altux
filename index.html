@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>Client Dashbaord - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>    
+<body>
+<div class="blue-overlay"></div>
+<div class="purple-overlay"></div>
+
+
+<main>
+<header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8 col-lg-6 case-header-id">
+                <ul class="agent-dash-menu">
+                    <li>Dashboard</li>
+                    <li>Insights</li>
+                    <li>Knowledge</li>
+                    <li>Administration</li>
+                </ul>
+            </div>
+            <div class="col-xs-0 col-lg-4"></div>
+            <div class="col-sm-4 col-lg-2">
+                <ul class="agent-dash-rightnav">
+                    <li>Case Icon</li>
+                    <li>Bell Icon</li>
+                    <li>John S</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container-fluid main-content">
+    <div class="row">
+        <div class="masonry">
+
+        </div>
+    </div>        
+</div>
+
+</main>
+<!--Scripts-->
+<script type="text/javascript" src="js/mason.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+<script>
+    $(document).ready(function(){
+
+        $('.masonry-panel').each(function(index, value){
+            $(this).delay(150 * index).animate({
+                opacity: 1,
+                top: '-=100px'},1000,'easeOutExpo')
+            });
+        });
+
+        $(window).resize(function(){
+            $('.masonry, .masonry-panel').addClass('panel-resize-duration');
+            $('.masonry-panel').addClass('panel-transition');
+        });
+</script>
+</body>
+
+</html>

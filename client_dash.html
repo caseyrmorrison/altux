@@ -14,11 +14,11 @@
 <header>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2 col-lg-1 case-header-id">
+            <div class="col-sm-2 col-lg-1 case-header-id">
                 <span class="data-label">Case ID</span>
                 <span class="header-caseID">867530900</span>
             </div>
-            <div class="col-md-4 col-lg-3 case-header-details">
+            <div class="col-sm-4 col-lg-3 case-header-details">
                 <span class="data-label">Product</span>
                 <span class="header-product-desc h-aligned">Xbox</span>
                 <span class="data-label">Issue Category</span>
@@ -26,17 +26,17 @@
                 <span class="data-label stacked-bottom">Issue</span>
                 <span class="header-issue-desc">Can't make purchase</span>
             </div>
-            <div class="col-md-2 col-lg-5"></div>
+            <div class="col-sm-2 col-lg-5"></div>
             <!--fill space with columns here-->
             <div class="col-md-1 col-lg-1">
                 <span class="data-label">State</span><br />
                 <span class="header-case-state">Open</span>
             </div>
-            <div class="col-md-2 col-lg-1">
+            <div class="col-sm-2 col-lg-1">
                 <span class="data-label">Status</span><br />
                 <span class="header-case-status">Identifying the issue</span>
             </div>
-            <div class="col-md-1 col-lg-1">
+            <div class="col-sm-1 col-lg-1">
                 <button class="button btn-primary">End</button>
             </div>
         </div>
@@ -45,11 +45,13 @@
 
 <div class="container-fluid main-content">
     <div class="row">
-        <div id="notes-column"></div>
-        <div class="grid">
-            <div class="grid-sizer"></div>
+        <div id="notes-column">
+            <span class="tile-title">Notes</span>
+            <div class="notes-input" contenteditable></div>
+        </div>
+        <div class="masonry">
 
-            <div id="client-profile-info" class="grid-item tile top-tile">
+            <div id="client-profile-info" class="masonry-panel tile">
                 <div id="profile-tile" class="tile-content">
                     <div class="profile">
                     <img src="assets/tormund.png" /><span class="profile-name">Kyle Geddes</span>
@@ -91,10 +93,10 @@
                 </div>
             </div>
 
-            <div id="services-tile" class="grid-item tile top-tile">
+            <div id="services-tile" class="masonry-panel tile">
                 <div class="tile-content">
                     <span class="tile-title">Services</span>
-                    <div class="row">
+                    <div id="services-row" class="row">
                         <div class="col-xs-4">
                             <div class="service-icon">
                             <img class="tile-icon" src="assets/Xbox_icon.png" />
@@ -185,8 +187,8 @@
                     </div>
                 </div>
             </div>
-
-            <div id="client-dash-alerts" class="grid-item tile">
+            
+            <div id="client-dash-alerts" class="masonry-panel tile">
                 <div class="tile-content">
                     <span class="tile-title">Alerts</span>
                     <div class="row">
@@ -221,67 +223,7 @@
                 </div>
             </div>
 
-            <div id="client-dash-cases" class="grid-item tile">
-                <div class="tile-content">
-                    <span class="tile-title">Cases</span>
-                    <table class="tile-table">
-                        <thead>
-                            <tr>
-                                <th>Case ID</th>
-                                <th>Status</th>
-                                <th>Product</th>
-                                <th>Category</th>
-                                <th>Last modified date</th>
-                                <th>Created date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>12341804185</td>
-                                <td>Open</td>
-                                <td>Xbox</td>
-                                <td>Techincal Support</td>
-                                <td>June 2, 2016 14:38</td>
-                                <td>June 1, 2016 9:00</td>
-                            </tr>
-                            <tr>
-                                <td>12341804185</td>
-                                <td>Open</td>
-                                <td>Xbox</td>
-                                <td>Techincal Support</td>
-                                <td>June 2, 2016 14:38</td>
-                                <td>June 1, 2016 9:00</td>
-                            </tr>
-                            <tr>
-                                <td>12341804185</td>
-                                <td>Open</td>
-                                <td>Xbox</td>
-                                <td>Techincal Support</td>
-                                <td>June 2, 2016 14:38</td>
-                                <td>June 1, 2016 9:00</td>
-                            </tr>
-                            <tr>
-                                <td>12341804185</td>
-                                <td>Open</td>
-                                <td>Xbox</td>
-                                <td>Techincal Support</td>
-                                <td>June 2, 2016 14:38</td>
-                                <td>June 1, 2016 9:00</td>
-                            </tr>
-                            <tr>
-                                <td>12341804185</td>
-                                <td>Open</td>
-                                <td>Xbox</td>
-                                <td>Techincal Support</td>
-                                <td>June 2, 2016 14:38</td>
-                                <td>June 1, 2016 9:00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div id="client-dash-payment" class="grid-item tile">
+            <div id="client-dash-payment" class="masonry-panel tile">
                 <div class="tile-content">
                     <span class="tile-title">Payment Instruments</span>
                     <table class="tile-table">
@@ -341,7 +283,67 @@
                 </div>
             </div>
 
-            <div id="client-dash-orders" class="grid-item tile">
+            <div id="client-dash-cases" class="masonry-panel tile">
+                <div class="tile-content">
+                    <span class="tile-title">Cases</span>
+                    <table class="tile-table">
+                        <thead>
+                            <tr>
+                                <th>Case ID</th>
+                                <th>Status</th>
+                                <th>Product</th>
+                                <th>Category</th>
+                                <th>Last modified date</th>
+                                <th>Created date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12341804185</td>
+                                <td>Open</td>
+                                <td>Xbox</td>
+                                <td>Techincal Support</td>
+                                <td>June 2, 2016 14:38</td>
+                                <td>June 1, 2016 9:00</td>
+                            </tr>
+                            <tr>
+                                <td>12341804185</td>
+                                <td>Open</td>
+                                <td>Xbox</td>
+                                <td>Techincal Support</td>
+                                <td>June 2, 2016 14:38</td>
+                                <td>June 1, 2016 9:00</td>
+                            </tr>
+                            <tr>
+                                <td>12341804185</td>
+                                <td>Open</td>
+                                <td>Xbox</td>
+                                <td>Techincal Support</td>
+                                <td>June 2, 2016 14:38</td>
+                                <td>June 1, 2016 9:00</td>
+                            </tr>
+                            <tr>
+                                <td>12341804185</td>
+                                <td>Open</td>
+                                <td>Xbox</td>
+                                <td>Techincal Support</td>
+                                <td>June 2, 2016 14:38</td>
+                                <td>June 1, 2016 9:00</td>
+                            </tr>
+                            <tr>
+                                <td>12341804185</td>
+                                <td>Open</td>
+                                <td>Xbox</td>
+                                <td>Techincal Support</td>
+                                <td>June 2, 2016 14:38</td>
+                                <td>June 1, 2016 9:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="client-dash-orders" class="masonry-panel tile">
                 <div class="tile-content">
                     <span class="tile-title">Orders</span>
                     <table class="tile-table">
@@ -363,12 +365,46 @@
                                 <td>$1346.34 USD</td>
                             </tr>
                             <tr class="child-row">
-                                <td><span class="dropdown-arrow"><img src="assets/chevron_down_icon.png" /></span>Visa x1282</td>
-                                <td>Surface Pro 3 - 128 /<br />
-                                Intel i5 (Modern)
+                                <td class="multi-data-column" colspan="2">
+                                <span class="dropdown-arrow"><img src="assets/chevron_down_icon.png" /></span>
+                                <span class="order-item">Surface Pro 3 - 128 /<br />
+                                Intel i5 (Modern)</span>
+                                <span class="order-item-quant">1</span>
+                                <span class="order-item-type">Devices</span>
                                 </td>
-                                <td>1</td>
-                                <td>Devices</td>
+                                <td>Shipped on Aug 2, 2016<br />
+                                Tracking</td>
+                                <td>0.9</td>
+                                <td>996.08 USD</td>
+                            </tr>
+                            <tr class="child-row">
+                                <td class="multi-data-column" colspan="2">
+                                <span class="dropdown-arrow"><img src="assets/chevron_down_icon.png" /></span>
+                                <span class="order-item">Surface Pro 3 - 128 /<br />
+                                Intel i5 (Modern)</span>
+                                <span class="order-item-quant">1</span>
+                                <span class="order-item-type">Devices</span>
+                                </td>
+                                <td>Shipped on Aug 2, 2016<br />
+                                Tracking</td>
+                                <td>0.9</td>
+                                <td>996.08 USD</td>
+                            </tr>
+                            <tr class="parent-row">
+                                <td>Aug 2, 2016</td>
+                                <td>Visa x1234</td>
+                                <td>Purchased</td>
+                                <td>$0.18 USD</td>
+                                <td>$1346.34 USD</td>
+                            </tr>
+                            <tr class="child-row">
+                                <td class="multi-data-column" colspan="2">
+                                <span class="dropdown-arrow"><img src="assets/chevron_down_icon.png" /></span>
+                                <span class="order-item">Surface Pro 3 - 128 /<br />
+                                Intel i5 (Modern)</span>
+                                <span class="order-item-quant">1</span>
+                                <span class="order-item-type">Devices</span>
+                                </td>
                                 <td>Shipped on Aug 2, 2016<br />
                                 Tracking</td>
                                 <td>0.9</td>
@@ -379,7 +415,7 @@
                 </div>
             </div>
 
-            <div class="grid-item tile">
+            <div id="client-dash-comments" class="masonry-panel tile">
                 <div class="tile-content">
                     <span class="tile-title">Comments</span>
                 </div>
@@ -391,19 +427,28 @@
 
 </main>
 <!--Scripts-->
+<script type="text/javascript" src="js/mason.js"></script>
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 
 <script>
     $(document).ready(function(){
-        $('#header').load('case-header.html');
-        $('.grid').masonry({
-            itemSelector: '.grid-item',
-            columnWidth: '.grid-sizer',
-            percentPosition: true
+
+        var tileHeight = ($('#services-tile').height() + $('#client-dash-orders').height() + $('#client-dash-payment').height());
+
+        $('.masonry-panel').each(function(index, value){
+            $(this).delay(150 * index).animate({
+                opacity: 1,
+                top: '-=100px'},1000,'easeOutExpo')
+            });
         });
-    });
+
+        $(window).resize(function(){
+            $('.masonry, .masonry-panel').addClass('panel-resize-duration');
+            $('.masonry-panel').addClass('panel-transition');
+        });
 </script>
 </body>
 
