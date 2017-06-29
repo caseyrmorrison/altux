@@ -1,0 +1,63 @@
+@font-face{
+    font-family: Segoe UI Normal;
+    src: url(../fonts/segoeuisl.ttf);
+}
+
+@font-face{
+    font-family: Segoe UI Light;
+    src: url(../fonts/segoeuil.ttf);
+}
+
+@font-face{
+    font-family: Segoe UI Bold;
+    src: url(../fonts/seguisb.ttf);
+}
+
+#timeline{
+    width:18%;
+    max-height:1014px;
+    position: fixed;
+    background-color:#333;
+}
+
+#case-history{
+    background-color: rgba(0,0,0,.85);
+    width:57%;
+    margin-left:18%;
+    min-height:100%;
+}
+
+.timeline-content{
+    padding:20px 10px;
+}
+
+.timeline-content ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-content ul li{
+    display:block;
+    list-style-type: none;
+    text-align: right;
+    flex: 1;
+}
+
+.case-history-content{
+    padding:20px;
+}
+
+.timeline-content ul li a{
+    padding:10px;
+    display:block;
+    color:#fff;
+}
+
+.case-history-data li{
+    list-style-type: none;
+}
+
+.case-history-data > li{
+    margin-bottom:60px;
+}

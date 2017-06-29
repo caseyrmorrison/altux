@@ -4,11 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/ClientDash.css" />
 </head>    
 <body>
 <div class="blue-overlay"></div>
 <div class="purple-overlay"></div>
-
 
 <main>
 <header>
@@ -436,19 +436,25 @@
 <script>
     $(document).ready(function(){
 
+        var windowHeight = $(window).height();
+        var headerHeight = $('header').height();
         var tileHeight = ($('#services-tile').height() + $('#client-dash-orders').height() + $('#client-dash-payment').height());
 
         $('.masonry-panel').each(function(index, value){
             $(this).delay(150 * index).animate({
                 opacity: 1,
                 top: '-=100px'},1000,'easeOutExpo')
-            });
         });
 
-        $(window).resize(function(){
-            $('.masonry, .masonry-panel').addClass('panel-resize-duration');
-            $('.masonry-panel').addClass('panel-transition');
+        $('#notes-column').css({
+            "height": (windowHeight - headerHeight)
         });
+    });
+
+    $(window).resize(function(){
+        $('.masonry, .masonry-panel').addClass('panel-resize-duration');
+        $('.masonry-panel').addClass('panel-transition');
+    });
 </script>
 </body>
 

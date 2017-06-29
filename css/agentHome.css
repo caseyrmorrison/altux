@@ -1,0 +1,42 @@
+@font-face{
+    font-family: Segoe UI Normal;
+    src: url(fonts/segoeuisl.ttf);
+}
+
+@font-face{
+    font-family: Segoe UI Light;
+    src: url(fonts/segoeuil.ttf);
+}
+
+@font-face{
+    font-family: Segoe UI Bold;
+    src: url(fonts/seguisb.ttf);
+}
+
+body{
+    background-image:url(../assets/mountains.png);
+}
+
+#agent-home-dash-header{
+    background-color:#000;
+}
+
+.agent-dash-menu li{
+    display: inline-block;
+}
+
+.agent-dash-menu li a{
+    font-family: Segoe UI Light;
+    color:#fff;
+    font-size: 20px;
+    padding:20px 15px;
+}
+
+.agent-dash-rightnav li{
+    display:inline-block;
+}
+
+.agent-dash-rightnav li a{
+    display:inline-block;
+    padding:10px 15px;
+}
