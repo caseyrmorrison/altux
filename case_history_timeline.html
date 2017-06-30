@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/timeline.css" />
     <link rel="stylesheet" type="text/css" href="css/ClientDash.css" />
 </head>    
-<body data-spy="scroll" data-target=".timeline-content" data-offset="100">
+<body data-spy="scroll" data-target="#timeline-nav" data-offset="-800">
 <div class="blue-overlay"></div>
 <div class="purple-overlay"></div>
 
@@ -52,8 +52,8 @@
         </div>
 
         <div id="timeline">
-            <div class="timeline-content">
-                <ul>
+            <div id="timeline-nav" class="timeline-content">
+                <ul class="nav">
                     <li><a href="#sep17">Sep 17, 2017</a></li>
                     <li><a href="#sep23">Sep 23, 2017</a></li>
                     <li><a href="#sep29">Sep 29, 2017</a></li>
@@ -73,8 +73,8 @@
 
         <div id="case-history">
             <div class="case-history-content">
-                <ul class="case-history-data">
-                    <li id="sep17">
+                <ul>
+                <li id="sep17" class="history-entry">
                         <div class="row">
                             <div class="col-xs-2 col-lg-1 history-icon"><img src="assets/interaction_parented.png" /></div>
                             <div class="col-xs-10 col-lg-11 history-date-client">Sep 17, 2017 | Kyle Geddes</div>
@@ -104,7 +104,7 @@
                             </div>
                         </div>
                     </li>
-                    <li id="sep23">
+                    <li id="sep23" class="history-entry">
                         <div class="row">
                             <div class="col-xs-2 col-lg-1 history-icon"><img src="assets/interaction_parented.png" /></div>
                             <div class="col-xs-10 col-lg-11 history-date-client">Sep 23, 2017 | Kyle Geddes</div>
@@ -134,7 +134,7 @@
                             </div>
                         </div>
                     </li>
-                    <li id="sep29">
+                    <li id="sep29" class="history-entry">
                         <div class="row">
                             <div class="col-xs-2 col-lg-1 history-icon"><img src="assets/interaction_parented.png" /></div>
                             <div class="col-xs-10 col-lg-11 history-date-client">Sep 29, 2017 | Kyle Geddes</div>
@@ -164,7 +164,7 @@
                             </div>
                         </div>
                     </li>
-                    <li id="oct4">
+                    <li id="oct4" class="history-entry">
                         <div class="row">
                             <div class="col-xs-2 col-lg-1 history-icon"><img src="assets/interaction_parented.png" /></div>
                             <div class="col-xs-10 col-lg-11 history-date-client">Oct 4, 2017 | Kyle Geddes</div>
@@ -194,7 +194,7 @@
                             </div>
                         </div>
                     </li>
-                    <li id="oct15">
+                    <li id="oct15" class="history-entry">
                         <div class="row">
                             <div class="col-xs-2 col-lg-1 history-icon"><img src="assets/interaction_parented.png" /></div>
                             <div class="col-xs-10 col-lg-11 history-date-client">Oct 15, 2017 | Kyle Geddes</div>
@@ -224,7 +224,7 @@
                             </div>
                         </div>
                     </li>
-                    <li id="oct17">
+                    <li id="oct17" class="history-entry">
                         <div class="row">
                             <div class="col-xs-2 col-lg-1 history-icon"><img src="assets/interaction_parented.png" /></div>
                             <div class="col-xs-10 col-lg-11 history-date-client">Oct 17, 2017 | Kyle Geddes</div>
@@ -254,7 +254,7 @@
                             </div>
                         </div>
                     </li>
-                    <li id="oct26">
+                    <li id="oct26" class="history-entry">
                         <div class="row">
                             <div class="col-xs-2 col-lg-1 history-icon"><img src="assets/interaction_parented.png" /></div>
                             <div class="col-xs-10 col-lg-11 history-date-client">Oct 26, 2017 | Kyle Geddes</div>
@@ -284,7 +284,7 @@
                             </div>
                         </div>
                     </li>
-                    <li id="nov1">
+                    <li id="nov1" class="history-entry">
                         <div class="row">
                             <div class="col-xs-2 col-lg-1 history-icon"><img src="assets/interaction_parented.png" /></div>
                             <div class="col-xs-10 col-lg-11 history-date-client">Nov 1, 2017 | Kyle Geddes</div>
@@ -314,7 +314,7 @@
                             </div>
                         </div>
                     </li>
-                    <li id="nov14">
+                    <li id="nov14" class="history-entry">
                         <div class="row">
                             <div class="col-xs-2 col-lg-1 history-icon"><img src="assets/interaction_parented.png" /></div>
                             <div class="col-xs-10 col-lg-11 history-date-client">Nov 14, 2017 | Kyle Geddes</div>
@@ -345,7 +345,7 @@
                             </div>
                         </div>
                     </li>
-                    <li id="nov24">
+                    <li id="nov24" class="history-entry">
                         <div class="row">
                             <div class="col-xs-2 col-lg-1 history-icon"><img src="assets/interaction_parented.png" /></div>
                             <div class="col-xs-10 col-lg-11 history-date-client">Nov 24, 2017 | Kyle Geddes</div>
@@ -375,7 +375,7 @@
                             </div>
                         </div>
                     </li>
-                    <li id="nov25">
+                    <li id="nov25" class="history-entry">
                         <div class="row">
                             <div class="col-xs-2 col-lg-1 history-icon"><img src="assets/interaction_parented.png" /></div>
                             <div class="col-xs-10 col-lg-11 history-date-client">Nov 25, 2017 | Kyle Geddes</div>
@@ -405,7 +405,7 @@
                             </div>
                         </div>
                     </li>
-                    <li id="dec5">
+                    <li id="dec5" class="history-entry">
                         <div class="row">
                             <div class="col-xs-2 col-lg-1 history-icon"><img src="assets/interaction_parented.png" /></div>
                             <div class="col-xs-10 col-lg-11 history-date-client">Dec 5, 2017 | Kyle Geddes</div>
@@ -435,7 +435,7 @@
                             </div>
                         </div>
                     </li>
-                    <li id="dec25">
+                    <li id="dec25" class="history-entry">
                         <div class="row">
                             <div class="col-xs-2 col-lg-1 history-icon"><img src="assets/interaction_parented.png" /></div>
                             <div class="col-xs-10 col-lg-11 history-date-client">Dec 25, 2017 | Kyle Geddes</div>
@@ -465,7 +465,8 @@
                             </div>
                         </div>
                     </li>
-                </ul>
+                    </ul>
+
             </div>
         </div>
 
@@ -478,6 +479,7 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="js/scrollspy.js"></script>
+<script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
 
 <script>
     $(document).ready(function(){
@@ -491,7 +493,13 @@
             "height": headerHeightDifference
         });
 
-        $('.case-history-data').scrollspy({ target: '.timeline-content' })
+        var historyHeight = $('.case-history-content').height();
+
+        $('body').scrollspy({
+            offset: 76
+        });
+
+        $('#timeline-nav .nav li > a').click(function(){$('body').scrollTo($(this).attr('href'),{duration:500,offset:-76});});
 
     });
 

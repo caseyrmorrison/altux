@@ -13,6 +13,11 @@
     src: url(../fonts/seguisb.ttf);
 }
 
+body{
+    height:100%;
+    position: relative;
+}
+
 #timeline{
     width:18%;
     max-height:1014px;
@@ -23,8 +28,16 @@
 #case-history{
     background-color: rgba(0,0,0,.85);
     width:57%;
+    height:auto;
     margin-left:18%;
-    min-height:100%;
+}
+
+#case-history ul{
+    list-style-type: none;
+}
+
+#case-history ul li.history-entry{
+    padding:30px 0px;
 }
 
 .timeline-content{
@@ -42,6 +55,10 @@
     list-style-type: none;
     text-align: right;
     flex: 1;
+}
+
+.timeline-content ul li.active{
+    font-size:21px;
 }
 
 .case-history-content{
