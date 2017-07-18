@@ -80,7 +80,6 @@ body{
 
 .history-notes-row,.history-action-row,.history-solution-row{
     margin-bottom:15px;
-    color:#000;
 }
 
 .history-log-meta-data{
@@ -138,11 +137,13 @@ body{
 
 .case-history-content{
     padding:0px 40px 20px 20px;
-    background-color: rgba(255,255,255,.7);
+    background-color: rgba(0,0,0,.7);
     background-attachment: fixed;
 }
 
-.case-history-content:before{
+/* BLUR FILTER */
+
+/*.case-history-content:before{
     background-image: url(../assets/cabin.jpg);
     background-attachment: fixed;
     content: '';
@@ -155,7 +156,7 @@ body{
     -moz-filter: blur(20px);
     -o-filter: blur(20px);
     -ms-filter: blur(20px);
-}
+}*/
 
 .entry-history{
     position: relative;
