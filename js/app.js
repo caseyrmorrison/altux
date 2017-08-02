@@ -11,9 +11,9 @@
      * @param cases: an array of CaseItem objects
      */
     // TODO: add an optional parameter of an initialized array
-    function CaseTimeline() {
-        this.numOfCases = 0;
-        this.cases = [];
+    function CaseTimeline(cases) {
+        this.numOfCases = cases ? cases.length : 0;
+        this.cases = cases || [];
     }
     
     CaseTimeline.prototype.addCase = function(caseObj) {
@@ -72,6 +72,7 @@
     var name = "Kyle Geddes";
     var solutions = "New Solution";
     var timeline = new CaseTimeline();
+    var test = new CaseTimeline(actions);
     
     // Add number of cases to cases array of CaseItem objects
     for (var i = 0; i < numCases; i++) {
@@ -80,5 +81,6 @@
     }
     console.log(timeline);
     //console.log(timeline.toString());
+    console.log(timeline.constructor.prototype);
     
 })();
