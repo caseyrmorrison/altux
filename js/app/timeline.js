@@ -1,3 +1,37 @@
+var Model = Model || {};
+
+Model.CaseTimeline = (function() {
+    var numOfCases = 0,
+        cases = [];
+    
+    function CaseTimeline(cases) {
+        numOfCases = cases ? cases.length : 0;
+        cases = cases || [];
+    }
+    
+    function addCase(caseObj) {
+        numOfCases += 1;
+        cases.push(caseObj);
+    }
+    
+    function getLength() {
+        return numOfCases;
+    }
+    
+    function getCases() {
+        return cases;
+    }
+    
+    return {
+        CaseTimeline: CaseTimeline,
+        addCase: addCase,
+        getCases: getCases,
+        getLength: getLength
+    };
+    
+});
+
+
 
 /**
  * Case History Timeline Object used to hold all the cases

@@ -9,8 +9,8 @@
     var dates = ["Sep 17, 2017", "Sep 23, 2017", "Sep 29, 2017", "Oct 4, 2017", "Oct 15, 2017", "Oct 17, 2017", "Oct 26, 2017", "Nov 1, 2017", "Nov 14, 2017", "Nov 24, 2017", "Nov 25, 2017", "Dec 5, 2017", "Dec 25, 2017"];
     var name = "Kyle Geddes";
     var solutions = "New Solution";
-    var timeline = new CaseTimeline();
-    var test = new CaseTimeline(actions);
+    var timeline = new Model.CaseTimeline();
+    timeline.CaseTimeline();
     /**************************************************************************************/
     
     // Initialize AngularJS app
@@ -28,6 +28,6 @@
     }
     console.log(timeline);
     //console.log(timeline.toString());
-    console.log(timeline.constructor.prototype);
+    //console.log(timeline.constructor.prototype);
     
 })();
