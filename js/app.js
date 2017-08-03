@@ -1,66 +1,4 @@
 (function() {
-    var app = angular.module('timeline', []);
-    
-    app.controller('CaseHistoryController', function() {
-        this.timeline = timeline;
-    });
-    
-    /**
-     * Case History Timeline Object used to hold all the cases
-     * 
-     * @param cases: an array of CaseItem objects
-     */
-    // TODO: add an optional parameter of an initialized array
-    function CaseTimeline(cases) {
-        this.numOfCases = cases ? cases.length : 0;
-        this.cases = cases || [];
-    }
-    
-    CaseTimeline.prototype.addCase = function(caseObj) {
-        this.numOfCases += 1;
-        this.cases.push(caseObj);
-    };
-    
-    CaseTimeline.prototype.getCases = function() {
-        return this.cases;
-    }
-    
-    CaseTimeline.prototype.getLength = function() {
-        return this.numOfCases;
-    };
-    
-    CaseTimeline.prototype.toString = function() {
-        var output = "The History Timeline:  (Size = " + this.numOfCases + ")\n\n";
-        for (var i = 0; i < this.cases.length; i++) {
-            output += "|Date: " + this.cases[i].date + " Name: " + this.cases[i].name + " |\n\n" +
-                "Note: " + this.cases[i].note + "\n\n" +
-                "Actions: " + this.cases[i].actions.join() + "\n\n" +
-                "Solution: " + this.cases[i].solution + "\n\n" +
-                "****Id: " + this.cases[i].id + "\n\n\n";
-        }
-        return output;
-    };
-    
-    /**
-     * Case Constructor to create sample cases for the timeline.
-     *
-     * @param note: A string note for this case.
-     * @param actions: An array of actions taken on this case.
-     * @param id: The id string of the case for scroll feature attached to the <li> element.
-     * @param date: The date string of the case.
-     * @param name: String name of the (not sure who exactly).
-     * @param solution: String solution of the case.
-     */
-    function CaseItem(note, actions, id, date, name, solution) {
-        this.note = note;
-        this.actions = actions;
-        this.id = id;
-        this.date = date;
-        this.name = name;
-        this.solution = solution;
-    }
-    
-    
     /**************************************************************************************
      * Test data initialization.
      */
@@ -73,7 +11,16 @@
     var solutions = "New Solution";
     var timeline = new CaseTimeline();
     var test = new CaseTimeline(actions);
+    /**************************************************************************************/
     
+    // Initialize AngularJS app
+    var app = angular.module('timeline', []);
+    
+    app.controller('CaseHistoryController', function() {
+        this.timeline = timeline;
+    });    
+    
+    // Add Test Data to the Timeline
     // Add number of cases to cases array of CaseItem objects
     for (var i = 0; i < numCases; i++) {
         var historyCase = new CaseItem(note, actions, ids[i], dates[i], name, solutions);
