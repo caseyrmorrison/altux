@@ -53,9 +53,13 @@
                 
             </div>
         </div>
-
+        <timeline-date></timeline-date>
+<!--
         <div id="timeline">
-            <div id="timeline-nav" class="timeline-content">
+            <div id="timeline-nav" class="timeline-content" timeline-date>
+-->
+<!--                <timeline-date></timeline-date>-->
+<!--
                 <ul class="nav">
                     <li data-ng-repeat="entry in mainCtrl.caseObj.timeline.entries">
                         <a href="#{{entry.id}}">
@@ -68,6 +72,7 @@
                             </svg>
                         </a>
                     </li>
+-->
                     
                     
                     
@@ -108,10 +113,10 @@
                     <li><a href="#dec25">Dec 25, 2017 <svg height="30" width="30">
   <circle cx="15" cy="15" r="10" stroke-width="3" />
 </svg></a></li>
--->
+
                 </ul>
             </div>
-        </div>
+        </div>-->
 
         <div id="case-history">
             <div class="case-history-content">
@@ -159,15 +164,15 @@
 <!--Scripts-->
 <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/lib/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="js/lib/scrollspy.js"></script>
-<script type="text/javascript" src="js/lib/jquery.scrollTo.min.js"></script>
 <script type="text/javascript" src="js/lib/angular.min.js"></script>
 <!--<script type="text/javascript" src="js/app/history-entry.js"></script>-->
 <!--<script type="text/javascript" src="js/app/timeline.js"></script>-->
 <!--<script type="text/javascript" src="js/app/case.js"></script>-->
 <script type="text/javascript" src="js/app/model.js"></script>
 <script type="text/javascript" src="js/app/app.js"></script>
+<script type="text/javascript" src="js/lib/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/lib/scrollspy.js"></script>
+<script type="text/javascript" src="js/lib/jquery.scrollTo.min.js"></script>
 
 <script>
     $(document).ready(function(){

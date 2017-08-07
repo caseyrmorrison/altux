@@ -36,4 +36,47 @@
     
     console.log(caseObj);
     
+    // custom directive
+    angular.module('timeline').directive('timelineDate', function() {
+        return {
+            restrict: 'E',
+            template: '<div id="timeline">'+
+                        '<div id="timeline-nav" class="timeline-content">'+
+                            '<ul class="nav">'+
+                                '<li data-ng-repeat="entry in mainCtrl.caseObj.timeline.entries">'+
+                                    '<a href="#{{entry.id}}">'+
+                                        '<span data-ng-show="entry.slaExp" class="timeline-tag alert-tag">sla expired</span>'+
+                                        '<span data-ng-show="entry.reOpen" class="timeline-tag">reopened</span>'+
+                                        '<span data-ng-show="entry.closed" class="timeline-tag">closed</span>'+
+                                        '{{entry.date}} '+
+                                        '<svg height="30" width="30">'+
+                                            '<circle cx="15" cy="15" r="10" stroke-width="3" />'+
+                                        '</svg>'+
+                                    '</a>'+
+                                '</li>'+
+                            '</ul>'+
+                        '</div>'+
+                    '</div>'
+        };
+    }); 
+    
+    
+    
+    
+    
 })();
+
+
+// Deciding the spacing
+    function spacing(href) {
+        var ele = $('a[href="'+href+'"]');
+        ele = ele.parent().outerHeight(true);
+        console.log(ele);
+        
+        // 100%
+        var num = 13;
+        
+        
+    }
+
+
