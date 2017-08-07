@@ -1,18 +1,20 @@
 /**
- * Case Constructor to create sample cases for the timeline.
+ * Case Constructor to create sample entry for the case timeline.
  *
- * @param note: A string note for this case.
- * @param actions: An array of actions taken on this case.
- * @param id: The id string of the case for scroll feature attached to the <li> element.
- * @param date: The date string of the case.
- * @param name: String name of the (not sure who exactly).
- * @param solution: String solution of the case.
+ * @param caseId: String id of the current case.
+ * @param product: String title of the product this case is involved with.
+ * @param issueCategory: String category the issue falls into.
+ * @param issue: String summary of the issue
+ * @param state: String status of the issue: open, closed
+ * @param timeline: String: Timeline object that has all the entries tied to the case.
+ * @param status: String stating the status of the case.
  */
-function CaseItem(note, actions, id, date, name, solution) {
-    this.note = note;
-    this.actions = actions;
-    this.id = id;
-    this.date = date;
-    this.name = name;
-    this.solution = solution;
+function Case(caseId, product, issueCategory, issue, state, timeline, status) {
+    this.caseId = caseId;
+    this.product = product;
+    this.issueCategory = issueCategory;
+    this.issue = issue;
+    this.state = state;
+    this.timeline = timeline;
+    this.status = status;
 }

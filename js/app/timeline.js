@@ -1,35 +1,44 @@
 var Model = Model || {};
 
-Model.CaseTimeline = (function() {
-    var numOfCases = 0,
-        cases = [];
+Model.CaseTimeline2 = (function() {
+    var entries = [];
     
-    function CaseTimeline(cases) {
-        numOfCases = cases ? cases.length : 0;
-        cases = cases || [];
+    function init(entries) {
+        entries = entries || [];
     }
     
-    function addCase(caseObj) {
-        numOfCases += 1;
-        cases.push(caseObj);
+    function addEntry(entryObj) {
+        entries.push(entryObj);
     }
     
-    function getLength() {
-        return numOfCases;
+    function getEntries() {
+        return entries;
     }
     
-    function getCases() {
-        return cases;
-    }
-    
-    return {
-        CaseTimeline: CaseTimeline,
-        addCase: addCase,
-        getCases: getCases,
-        getLength: getLength
+    function toString() {
+        var output = "The History Timeline:  (Size = " + entries.length + ")\n\n";
+        for (var i = 0; i < entries.length; i++) {
+            output += "|Date: " + entries[i].date + " Name: " + entries[i].name + " |\n\n" +
+                "Note: " + entries[i].note + "\n\n" +
+                "Actions: " + entries[i].actions.join() + "\n\n" +
+                "Solution: " + entries[i].solution + "\n\n" +
+                "****Id: " + entries[i].id + "\n\n\n";
+        }
+        return output;
     };
     
-});
+    return {
+        init: init,
+        addEntry: addEntry,
+        getEntries: getEntries,
+        toString: toString
+    };
+    
+})();
+
+
+
+
 
 
 
